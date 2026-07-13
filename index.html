@@ -1,13 +1,138 @@
-Hello World
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Your Name</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bohan Lu — PhD candidate in Electrical and Computer Engineering at Duke University, working on fault-tolerant quantum computation and quantum error correction.">
+  <title>Bohan Lu</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Your Name</h1>
-    <p>Quantum computing researcher, Duke University.</p>
-    <p><a href="https://github.com/yourusername">GitHub</a> | <a href="your_cv.pdf">CV</a></p>
+
+<header>
+  <h1>Bohan Lu</h1>
+  <p class="tagline">PhD candidate, Electrical &amp; Computer Engineering, Duke University</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#publications">Publications</a>
+    <a href="#talks">Talks &amp; Posters</a>
+    <a href="#software">Software</a>
+    <a href="#teaching">Teaching</a>
+  </nav>
+  <p class="contact-line">
+    <a href="mailto:bohan.lu@duke.edu">bohan.lu@duke.edu</a>
+    <span aria-hidden="true">·</span>
+    <a href="https://github.com/jerrylvx">github.com/jerrylvx</a>
+    <span aria-hidden="true">·</span>
+    <a href="cv.pdf">CV (PDF)</a>
+  </p>
+</header>
+
+<main>
+
+<section id="about">
+  <h2>About</h2>
+  <p>
+    I work on fault-tolerant quantum computation in
+    <a href="https://brownlab.pratt.duke.edu/">Kenneth Brown's group</a> at Duke University.
+    My research centers on quantum error correction: Floquet and dynamical codes,
+    transversal gates, and decoders for quantum LDPC codes.
+  </p>
+  <p class="education">
+    PhD in Electrical &amp; Computer Engineering, Duke University (2023–present)
+    <span aria-hidden="true">·</span>
+    MSc in Physics, Freie Universität Berlin
+    <span aria-hidden="true">·</span>
+    BA in Mathematics &amp; Physics, Washington University in St.&nbsp;Louis
+  </p>
+</section>
+
+<section id="publications">
+  <h2>Publications</h2>
+  <ul class="pub-list">
+    <li>
+      <span class="pub-title">Measuring out quasi-local integrals of motion from entanglement</span><br>
+      <span class="authors"><strong>B. Lu</strong>, C. Bertoni, S. J. Thomson, J. Eisert</span><br>
+      <span class="venue">Communications Physics 7, 17 (2024)</span>
+      <span class="links">
+        <a href="https://doi.org/10.1038/s42005-023-01478-5">journal</a>
+        <a href="https://arxiv.org/abs/2301.01787">arXiv:2301.01787</a>
+      </span>
+    </li>
+  </ul>
+</section>
+
+<section id="talks">
+  <h2>Talks &amp; Posters</h2>
+  <ul class="talk-list">
+    <li>
+      <span class="pub-title">A dynamical error-correcting code from a minimally non-local hypergraph product code</span><br>
+      <span class="authors">with Kenneth Brown</span> —
+      <span class="venue">poster, QIP 2025</span>
+    </li>
+    <li>
+      <span class="pub-title">Improved decoding of quantum LDPC codes using neural-network enhanced belief propagation</span><br>
+      <span class="authors">with Arthur Pesah, Joschka Roffe, Nithin Raveendran</span> —
+      <span class="venue">posters, QIP 2023 and QEC 2023 (Sydney)</span>
+    </li>
+    <li>
+      <span class="pub-title">Entanglement dynamics in a many-body localized system</span><br>
+      <span class="authors">with Christian Bertoni, Steven Thomson, Jens Eisert</span> —
+      <span class="venue">poster, CRC 183 Summer School 2022</span>
+    </li>
+    <li>
+      <span class="pub-title">Reduced density operators of finite-sized Heisenberg XXZ chains</span><br>
+      <span class="authors">with Alexander Seidel</span> —
+      <span class="venue">talk, APS March Meeting 2019</span>
+    </li>
+  </ul>
+</section>
+
+<section id="software">
+  <h2>Software</h2>
+  <ul class="project-list">
+    <li>
+      <h3><a href="https://github.com/jerrylvx/stim-floquet">stim-floquet</a> <span class="lang">Python</span></h3>
+      <p>Automated Floquet measurement-schedule synthesis, homology verification, and local
+      detector discovery for CSS quantum error-correcting codes. Produces
+      <a href="https://github.com/quantumlib/Stim">Stim</a> circuits directly from
+      parity-check matrices.</p>
+    </li>
+    <li>
+      <h3>QECMinPoly.jl <span class="lang">Julia</span></h3>
+      <p>Minimal-polynomial computation over GF(2) for CSS codes — reliable, scalable
+      <code>minpoly</code> for the symplectic matrices arising in quantum error correction,
+      built on Oscar.jl.</p>
+    </li>
+    <li>
+      <h3>gate2code <span class="lang">Python</span></h3>
+      <p>Re-implementation of the Campbell–Howard <em>Synthillation</em> framework for magic-state
+      distillation and multi-qubit gate synthesis, from the original Mathematica supplement to a
+      pip-installable library.</p>
+    </li>
+  </ul>
+</section>
+
+<section id="teaching">
+  <h2>Teaching</h2>
+  <ul class="teaching-list">
+    <li><span class="when">Fall 2024</span> TA, ECE 520 Quantum Engineering, Duke University</li>
+    <li><span class="when">Winter 2020</span> TA, tensor-network seminar, Freie Universität Berlin</li>
+    <li><span class="when">2016–2018</span> TA, grader, and physics help-desk mentor, Washington University in St.&nbsp;Louis</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <p>
+    <a href="mailto:bohan.lu@duke.edu">bohan.lu@duke.edu</a>
+    <span aria-hidden="true">·</span>
+    <a href="https://github.com/jerrylvx">GitHub</a>
+    <span aria-hidden="true">·</span>
+    <a href="cv.pdf">CV</a>
+  </p>
+</footer>
+
 </body>
 </html>

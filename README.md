@@ -1,7 +1,5 @@
 # jerrylvx.github.io
 
-This is a simple "Hello World" website for jerrylvx.github.io.
+Personal website of Bohan Lu — https://jerrylvx.github.io
 
-## To run this project:
-
-1. Open `index.html` in your web browser.
+Hand-written static HTML/CSS, no build step: edit, commit, push to `main` and GitHub Pages deploys it.

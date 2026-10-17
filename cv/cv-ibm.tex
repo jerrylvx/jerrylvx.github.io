@@ -11,7 +11,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usepackage[top=0.5in,bottom=0.5in,left=0.4in,right=0.5in]{geometry}
+\usepackage[margin=0.5in]{geometry}
 \setlength{\hintscolumnwidth}{3.1cm}
 \urlstyle{same}
 \nopagenumbers{}
@@ -36,6 +36,7 @@
 \renewcommand{\labelitemi}{\textcolor{color1}{\textbullet}}
 % Compact the section hierarchy while keeping each heading clearly distinct.
 \renewcommand*{\sectionfont}{\large\mdseries\upshape}
+\renewcommand*{\hintfont}{\normalsize\mdseries\upshape}
 \settoheight{\baseletterheight}{\sectionstyle{o}}
 \makeatletter
 \RenewDocumentCommand{\section}{sm}{%
@@ -49,28 +50,29 @@
 \renewcommand*{\namefont}{\fontsize{24}{26}\mdseries\upshape}
 
 \makecvtitle
-\vspace{-3.4em}
+% Leave clear space below the title and the complete contact block.
+\vspace{-2.2em}
 
 \section{Research Interests}
 \cvitem{}{Fault-tolerant quantum computing, especially transversal non-Clifford gates, quantum LDPC and Floquet codes, and decoding.}
 
 \section{Education}
-\cventry{2023--present}{PhD in Electrical and Computer Engineering}{Duke University}{Durham, NC}{expected 2027--2028}{\normalsize Advisor: Kenneth R. Brown}
+\cventry{2023--Present}{PhD in Electrical and Computer Engineering}{Duke University}{Durham, NC}{expected 2027--2028}{\normalsize Advisor: Kenneth R. Brown}
 \cventry{2019--2022}{MSc in Physics}{Freie Universität Berlin}{Berlin, Germany}{}{\normalsize Advisor: Jens Eisert. Co-developed an entanglement-based method to extract spatial properties of quasi-local integrals of motion and contributed simulation code.}
 \cventry{2015--2019}{BA in Mathematics and Physics}{Washington University in St.\ Louis}{St.\ Louis, MO}{}{}
 
 \section{Research Experience}
-\cventry{2023--present}{Doctoral Research, Brown Lab}{Duke University}{Durham, NC}{}{\normalsize
+\cventry{2023--Present}{Doctoral Research, Brown Lab}{Duke University}{Durham, NC}{}{\normalsize
 \begin{itemize}
 \item Constructed CSS codes implementing logical CCZ via physical transversal $T/T^\dagger$ gates using projective geometry and SAT, and proved $n\geq 39$ for CSS codes with 3 logical qubits, $d_Z\geq 3$, and quasi-transversal CCZ
 \item Designed a dynamical code from a minimally non-local hypergraph product code
 \item Developed stim-floquet (\href{https://github.com/jerrylvx/stim-floquet}{github.com/jerrylvx/stim-floquet}), an open-source Python package for Floquet schedules, GF(2) homology checks, local detector discovery, and Stim circuit output
 \end{itemize}}
-\cventry{\parbox[t]{\hintscolumnwidth}{\raggedleft Aug 2026--present\\Oct 2025--May 2026}}{Consulting Contractor}{Xanadu Quantum Technologies}{Remote}{}{\normalsize
+\cventry{\parbox[t]{\hintscolumnwidth}{\raggedleft Aug 2026--Present\\Oct 2025--May 2026}}{Consulting Contractor}{Xanadu Quantum Technologies}{Remote}{}{\normalsize
 \begin{itemize}
 \item Research fault-tolerant quantum architecture (supervisor: Eric Sabo)
 \end{itemize}}
-\cventry{May--Aug 2026}{Architecture Intern}{Xanadu Quantum Technologies}{Remote}{}{\normalsize
+\cventry{May 2026--Aug 2026}{Architecture Intern}{Xanadu Quantum Technologies}{Remote}{}{\normalsize
 \begin{itemize}
 \item Researched decoding for quantum LDPC codes (supervisor: Eric Sabo)
 \end{itemize}}
@@ -83,15 +85,15 @@
 \cvitem{AI skills}{Agentic orchestration, engineering, and harness building}
 \cvitem{Computing}{Python, C++, HPC clusters}
 
-\section{Selected Presentations}
+\section{Presentations}
 \cvitem{Oct 2026}{\emph{Building codes with transversal CCZ using projective geometry and SAT solvers.} Talk, \href{https://seminar.math.vt.edu/applied_algebra/index.html}{Applied Algebra Seminar}, Virginia Tech (online), Oct 22 (upcoming).}
 \cvitem{Sep 2026}{\emph{Boolean functions: applications in quantum error correction and beyond.} Talk, \href{https://sites.duke.edu/dqctheory/}{Duke Quantum Center Theory Seminar}, Sep 16.}
-\cvitem{2026}{\emph{Discovery and classification of small CSS codes supporting a quasi-transversal CCZ logical gate.} Poster, QEC 2026.}
+\cvitem{Jun 2026}{\emph{Discovery and classification of small CSS codes supporting quasi-transversal CCZ logical gate.} Poster, QEC 2026.}
 \cvitem{2025}{\emph{A dynamical error-correcting code from a minimally non-local hypergraph product code.} Poster, QIP 2025 and QEC 2025.}
 \cvitem{2023}{\emph{Improved decoding of quantum LDPC codes using neural-network enhanced belief propagation.} Poster, QIP 2023, QEC 2023 (Sydney), and WE-Heraeus Seminar (Bad Honnef).}
 
 \section{Teaching}
-\cvitem{Spring 2026}{Teaching Assistant, Liberata, Duke Bass Connections, Duke University. Mentored student research projects and contributed to research and development on the algorithms team}
+\cvitem{Spring 2026}{Teaching Assistant, Liberata, Duke Bass Connections, Duke University. Mentored student research projects and contributed to research and development on the algorithms team.}
 \cvitem{Fall 2024}{Teaching Assistant, ECE 520 Quantum Engineering, Duke University}
 
 \end{document}

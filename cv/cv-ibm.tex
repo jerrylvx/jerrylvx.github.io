@@ -1,0 +1,109 @@
+\documentclass[10pt,letterpaper,sans]{moderncv}
+
+\moderncvstyle{classic}
+\moderncvcolor{purple}
+\moderncvicons{marvosym}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[top=0.5in,bottom=0.5in,left=0.5in,right=0.5in]{geometry}
+\setlength{\hintscolumnwidth}{2.9cm}
+\urlstyle{same}
+\nopagenumbers{}
+% Keep terms and DOIs intact for applicant-tracking text extraction
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\tolerance=2000
+\emergencystretch=3em
+
+\name{Bohan}{Lu}
+\title{PhD Candidate, Quantum Error Correction}
+\email{bohan.lu@duke.edu}
+\homepage{jerrylvx.github.io}
+\extrainfo{\httpslink{github.com/jerrylvx}}
+
+\begin{document}
+
+% Plain-text contact line and bullets (icon glyphs extract as stray letters)
+\renewcommand*{\emailsymbol}{}
+\renewcommand*{\homepagesymbol}{}
+\renewcommand*{\listitemsymbol}{\textbullet~}
+\renewcommand{\labelitemi}{\textcolor{color1}{\textbullet}}
+% Tighter space around section headings (moderncv default: 2.5ex before, 1ex after)
+\makeatletter
+\RenewDocumentCommand{\section}{sm}{%
+  \par\addvspace{1.2ex}%
+  \phantomsection{}%
+  \addcontentsline{toc}{section}{#2}%
+  \cvitem[0ex]{\strut\raggedleft\raisebox{\baseletterheight}{\color{color1}\rule{\hintscolumnwidth}{0.95ex}}}{\strut\sectionstyle{#2}}%
+  \par\nobreak\addvspace{0.4ex}\@afterheading}
+\makeatother
+% Name at 24 pt (Duke guide: 16 pt or larger)
+\renewcommand*{\namefont}{\fontsize{24}{26}\mdseries\upshape}
+
+\makecvtitle
+\vspace{-2.5em}
+
+\section{Research Interests}
+\cvitem{}{Fault-tolerant quantum computing, with a focus on codes that implement non-Clifford gates transversally, quantum LDPC and Floquet codes, and their decoders. Recent work combines projective geometry and SAT solvers to construct small codes with transversal CCZ and to prove lower bounds on their length.}
+
+\section{Education}
+\cventry{2023--present}{PhD in Electrical and Computer Engineering}{Duke University}{Durham, NC}{expected 2027--2028}{Advisor: Kenneth R. Brown}
+\cventry{2019--2022}{MSc in Physics}{Freie Universität Berlin}{Berlin, Germany}{}{Thesis: \href{https://sites.google.com/view/bohanlu96/research}{\emph{Entanglement dynamics of a many-body localized system}}, advisor: Jens Eisert}
+\cventry{2015--2019}{BA in Mathematics and Physics}{Washington University in St.\ Louis}{St.\ Louis, MO}{}{Cum Laude, Distinction in Mathematics, High Distinction in Physics}
+
+\section{Research Experience}
+\cventry{2023--present}{Doctoral Research, Brown Group}{Duke University}{Durham, NC}{}{
+\begin{itemize}
+\item Constructed CSS codes with transversal CCZ using projective geometry and SAT solvers, and proved that no such code with 3 logical qubits and $d_Z\geq 3$ exists below 39 qubits
+\item Designed a dynamical code from a minimally non-local hypergraph product code
+\item Developed stim-floquet (\href{https://github.com/jerrylvx/stim-floquet}{github.com/jerrylvx/stim-floquet}), an open-source Python package for Floquet measurement schedules, GF(2) homology checks, and local detector discovery for CSS codes, with Stim circuit output
+\end{itemize}}
+\cventry{Oct 2025--Aug 2026}{Architecture Intern and Consulting Contractor}{Xanadu Quantum Technologies}{Remote}{}{
+\begin{itemize}
+\item Architecture Intern, May--Aug 2026: researched decoding for quantum LDPC codes (supervisor: Eric Sabo)
+\item Contractor, Oct 2025--Aug 2026: researched fault-tolerant quantum architecture (supervisor: Eric Sabo)
+\end{itemize}}
+\cventry{Jul--Oct 2022}{Research Intern}{HQS Quantum Simulations GmbH}{Karlsruhe, Germany}{}{
+\begin{itemize}
+\item Developed and benchmarked a Hermite-polynomial spectral resolution method for resonant-level models, documented in an internal report (supervisor: Peter Schmitteckert)
+\end{itemize}}
+\cventry{2021--2022}{Master's Thesis Research}{Freie Universität Berlin}{Berlin, Germany}{}{
+\begin{itemize}
+\item Proposed a protocol to extract the local integrals of motion of a many-body localized system from its entanglement dynamics, published in Communications Physics
+\item Ran tensor-network simulations on clusters and analyzed quantum-information bounds on entanglement growth
+\end{itemize}}
+
+\section{Publications}
+\cvitem{2026}{\begin{minipage}[t]{\linewidth}\raggedright\textbf{Building codes with transversal CCZ using projective geometry and SAT solvers.} \textbf{B.~Lu}, K.~R.~Brown. Preprint, \href{https://arxiv.org/abs/2610.09341}{arXiv:2610.09341}. Code and data: \href{https://github.com/jerrylvx/gate2code-public}{github.com/jerrylvx/gate2code-public}\end{minipage}}
+\cvitem{2024}{\begin{minipage}[t]{\linewidth}\raggedright\textbf{Measuring out quasi-local integrals of motion from entanglement.} \textbf{B.~Lu}, C.~Bertoni, S.~J.~Thomson, J.~Eisert. \emph{Communications Physics} \textbf{7}, 17 (2024). \href{https://doi.org/10.1038/s42005-023-01478-5}{doi:10.1038/s42005-023-01478-5}, \href{https://arxiv.org/abs/2301.01787}{arXiv:2301.01787}\end{minipage}}
+
+\section{Talks}
+\cvitem{Oct 2026}{\emph{Building codes with transversal CCZ using projective geometry and SAT solvers.} \href{https://seminar.math.vt.edu/applied_algebra/index.html}{Applied Algebra Seminar}, Virginia Tech (online), Oct 22, 2026.}
+\cvitem{2019}{\emph{Reduced density operators of finite-sized Heisenberg XXZ chains.} With A.~Seidel. APS March Meeting 2019.}
+
+\section{Posters}
+\cvitem{2026}{\emph{Small codes with transversal T implementing a logical CCZ gate.} QEC 2026.}
+\cvitem{2025}{\emph{A dynamical error-correcting code from a minimally non-local hypergraph product code.} With K.~Brown. QIP 2025 and QEC 2025.}
+\cvitem{2023}{\emph{Improved decoding of quantum LDPC codes using neural-network enhanced belief propagation.} With A.~Pesah, J.~Roffe, N.~Raveendran. QIP 2023 and QEC 2023 (Sydney).}
+\cvitem{2022}{\emph{Entanglement dynamics in a many-body localized system.} With C.~Bertoni, S.~Thomson, J.~Eisert. CRC 183 Summer School 2022.}
+
+\clearpage
+\section{Skills}
+\cvitem{AI skills}{Agentic orchestration, engineering, and harness building}
+\cvitem{Computing}{Python, C++, HPC clusters}
+
+\section{Teaching}
+\cvitem{2025--2026}{Teaching Assistant, Duke Bass Connections course on Liberata (Startup Accelerator for Publishing and Peer Review), Duke University}
+\cvitem{Fall 2024}{Teaching Assistant, ECE 520 Quantum Engineering, Duke University}
+\cvitem{Winter 2020}{Teaching Assistant, tensor-network seminar, Freie Universität Berlin}
+
+\section{Awards and Certificates}
+\cvitem{2026}{Duke Graduate School Conference Travel Award}
+\cvitem{2025}{NVIDIA Academy certificate, AI Infrastructure and Operations Fundamentals}
+\cvitem{2017--2018}{Greg Delos Fellowship, Physics Department, Washington University in St.\ Louis}
+\cvitem{2016}{Summer Fellowship in Physics, Washington University in St.\ Louis}
+\cvitem{2015--2019}{Dean's List, Washington University in St.\ Louis (Fall 2015 to Fall 2016, Spring 2019)}
+
+\end{document}

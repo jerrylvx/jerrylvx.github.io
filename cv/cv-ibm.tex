@@ -1,4 +1,4 @@
-\documentclass[11pt,letterpaper,sans]{moderncv}
+\documentclass[10pt,letterpaper,sans]{moderncv}
 
 \moderncvstyle{classic}
 \moderncvcolor{black}
@@ -11,8 +11,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usepackage[top=0.5in,bottom=0.5in,left=0.5in,right=0.5in]{geometry}
-\setlength{\hintscolumnwidth}{3.3cm}
+\usepackage[top=0.5in,bottom=0.5in,left=0.4in,right=0.5in]{geometry}
+\setlength{\hintscolumnwidth}{3.1cm}
 \urlstyle{same}
 \nopagenumbers{}
 % Keep terms and DOIs intact for applicant-tracking text extraction
@@ -34,11 +34,22 @@
 \renewcommand*{\homepagesymbol}{}
 \renewcommand*{\listitemsymbol}{\textbullet~}
 \renewcommand{\labelitemi}{\textcolor{color1}{\textbullet}}
+% Compact the section hierarchy while keeping each heading clearly distinct.
+\renewcommand*{\sectionfont}{\large\mdseries\upshape}
+\settoheight{\baseletterheight}{\sectionstyle{o}}
+\makeatletter
+\RenewDocumentCommand{\section}{sm}{%
+  \par\addvspace{1ex}%
+  \phantomsection{}%
+  \addcontentsline{toc}{section}{#2}%
+  \cvitem[0ex]{\strut\raggedleft\raisebox{\baseletterheight}{\color{color1}\rule{\hintscolumnwidth}{0.8ex}}}{\strut\sectionstyle{#2}}%
+  \par\nobreak\addvspace{0.25ex}\@afterheading}
+\makeatother
 % Name at 24 pt (Duke guide: 16 pt or larger)
 \renewcommand*{\namefont}{\fontsize{24}{26}\mdseries\upshape}
 
 \makecvtitle
-\vspace{-3.25em}
+\vspace{-3.4em}
 
 \section{Research Interests}
 \cvitem{}{Fault-tolerant quantum computing, especially transversal non-Clifford gates, quantum LDPC and Floquet codes, and decoding.}
@@ -49,7 +60,7 @@
 \cventry{2015--2019}{BA in Mathematics and Physics}{Washington University in St.\ Louis}{St.\ Louis, MO}{}{}
 
 \section{Research Experience}
-\cventry{2023--present}{Doctoral Research, Brown Group}{Duke University}{Durham, NC}{}{\normalsize
+\cventry{2023--present}{Doctoral Research, Brown Lab}{Duke University}{Durham, NC}{}{\normalsize
 \begin{itemize}
 \item Constructed CSS codes implementing logical CCZ via physical transversal $T/T^\dagger$ gates using projective geometry and SAT, and proved $n\geq 39$ for CSS codes with 3 logical qubits, $d_Z\geq 3$, and quasi-transversal CCZ
 \item Designed a dynamical code from a minimally non-local hypergraph product code

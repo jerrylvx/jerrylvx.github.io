@@ -10,23 +10,29 @@
 <body>
 
 <header>
-  <h1>Bohan Lu</h1>
-  <p class="tagline">PhD candidate, Electrical &amp; Computer Engineering, Duke University</p>
-  <nav>
+  <div class="profile-header">
+    <img class="profile-photo" src="images/bohan-lu.jpg" alt="Bohan Lu outdoors in the mountains" width="160" height="160">
+    <div class="profile-info">
+      <h1>Bohan Lu</h1>
+      <p class="tagline">PhD candidate, Electrical &amp; Computer Engineering, Duke University</p>
+      <p class="contact-line">
+        <a href="mailto:bohan.lu@duke.edu">bohan.lu@duke.edu</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://github.com/jerrylvx">github.com/jerrylvx</a>
+        <span aria-hidden="true">·</span>
+        <a href="cv.pdf">CV (PDF)</a>
+      </p>
+    </div>
+  </div>
+  <nav aria-label="Main navigation">
     <a href="#about">About</a>
-    <a href="#experience">Experience</a>
+    <a href="#research">Research</a>
     <a href="#publications">Publications</a>
-    <a href="#talks">Talks &amp; Posters</a>
     <a href="#software">Software</a>
+    <a href="#talks">Presentations</a>
+    <a href="#experience">Experience</a>
     <a href="#teaching">Teaching</a>
   </nav>
-  <p class="contact-line">
-    <a href="mailto:bohan.lu@duke.edu">bohan.lu@duke.edu</a>
-    <span aria-hidden="true">·</span>
-    <a href="https://github.com/jerrylvx">github.com/jerrylvx</a>
-    <span aria-hidden="true">·</span>
-    <a href="cv.pdf">CV (PDF)</a>
-  </p>
 </header>
 
 <main>
@@ -34,17 +40,13 @@
 <section id="about">
   <h2>About</h2>
   <p>
-    I work on fault-tolerant quantum computation in
-    <a href="https://brownlab.pratt.duke.edu/">Kenneth Brown's group</a> at Duke University.
-    My research centers on quantum error correction: Floquet and dynamical codes,
-    transversal gates, and decoders for quantum LDPC codes.
-  </p>
-  <p>
-    I run my research through LLM coding agents (Claude Code, Codex) for research code,
-    simulations, literature work, and paper revision.
+    I am a PhD candidate in Electrical and Computer Engineering at Duke University's
+    <a href="https://brownlab.pratt.duke.edu/">Brown Lab</a>, advised by Kenneth R. Brown.
+    I work on fault-tolerant quantum computing and quantum error correction, with interests
+    in transversal gates, Floquet codes, and decoding for quantum LDPC codes.
   </p>
   <p class="education">
-    PhD in Electrical &amp; Computer Engineering, Duke University (2023–present)
+    PhD in Electrical &amp; Computer Engineering, Duke University (2023–Present)
     <span aria-hidden="true">·</span>
     MSc in Physics, Freie Universität Berlin
     <span aria-hidden="true">·</span>
@@ -52,12 +54,37 @@
   </p>
 </section>
 
-<section id="experience">
-  <h2>Experience</h2>
-  <ul class="teaching-list">
-    <li><span class="when">Summer 2026</span> Architecture intern, Xanadu Quantum Technologies (May–Aug 2026). Research on decoding for quantum LDPC codes.</li>
-    <li><span class="when">2025–2026</span> Consulting contractor, Xanadu Quantum Technologies (Oct 2025–Aug 2026). Research on fault-tolerant quantum computing architecture.</li>
-  </ul>
+<section id="research">
+  <h2>Research</h2>
+  <article>
+    <h3>Transversal gates</h3>
+    <p>
+      How can quantum codes protect information while allowing logical operations?
+      With Kenneth R. Brown, I constructed CSS codes that implement a logical CCZ gate
+      through physical transversal T/T<sup>†</sup> gates, using projective geometry and
+      SAT solvers. <a href="https://arxiv.org/abs/2610.09341">Paper</a> ·
+      <a href="https://github.com/jerrylvx/gate2code-public">Code and data</a>
+    </p>
+  </article>
+  <article>
+    <h3>Floquet and dynamical codes</h3>
+    <p>
+      I study how changing stabilizer measurements over time can protect quantum information.
+      With Kenneth R. Brown, I designed a dynamical code from a minimally non-local hypergraph
+      product code. I also develop software for constructing measurement schedules and
+      identifying local detector relations. <a href="#dynamical-code-poster">Presentations</a> ·
+      <a href="https://github.com/jerrylvx/stim-floquet">Software</a>
+    </p>
+  </article>
+  <article>
+    <h3>Decoding quantum LDPC codes</h3>
+    <p>
+      I study algorithms for recovering encoded quantum information from noisy error
+      syndromes, with a focus on quantum LDPC codes and belief propagation. My work includes
+      neural-network enhanced belief propagation and research on decoding during my Xanadu
+      internship. <a href="#neural-bp-poster">Presentations</a>
+    </p>
+  </article>
 </section>
 
 <section id="publications">
@@ -84,51 +111,15 @@
   </ul>
 </section>
 
-<section id="talks">
-  <h2>Talks &amp; Posters</h2>
-  <ul class="talk-list">
-    <li>
-      <span class="pub-title">Small codes with transversal T implementing a logical CCZ gate</span><br>
-      <span class="venue">poster, QEC 2026</span>
-    </li>
-    <li>
-      <span class="pub-title">A dynamical error-correcting code from a minimally non-local hypergraph product code</span><br>
-      <span class="authors">with Kenneth Brown</span> —
-      <span class="venue">posters, QIP 2025 and QEC 2025</span>
-    </li>
-    <li>
-      <span class="pub-title">Improved decoding of quantum LDPC codes using neural-network enhanced belief propagation</span><br>
-      <span class="authors">with Arthur Pesah, Joschka Roffe, Nithin Raveendran</span> —
-      <span class="venue">posters, QIP 2023 and QEC 2023 (Sydney)</span>
-    </li>
-    <li>
-      <span class="pub-title">Entanglement dynamics in a many-body localized system</span><br>
-      <span class="authors">with Christian Bertoni, Steven Thomson, Jens Eisert</span> —
-      <span class="venue">poster, CRC 183 Summer School 2022</span>
-    </li>
-    <li>
-      <span class="pub-title">Reduced density operators of finite-sized Heisenberg XXZ chains</span><br>
-      <span class="authors">with Alexander Seidel</span> —
-      <span class="venue">talk, APS March Meeting 2019</span>
-    </li>
-  </ul>
-</section>
-
 <section id="software">
   <h2>Software</h2>
   <ul class="project-list">
     <li>
       <h3><a href="https://github.com/jerrylvx/stim-floquet">stim-floquet</a> <span class="lang">Python</span></h3>
-      <p>Automated Floquet measurement-schedule synthesis, homology verification, and local
-      detector discovery for CSS quantum error-correcting codes. Produces
-      <a href="https://github.com/quantumlib/Stim">Stim</a> circuits directly from
-      parity-check matrices.</p>
-    </li>
-    <li>
-      <h3>QECMinPoly.jl <span class="lang">Julia</span></h3>
-      <p>Minimal-polynomial computation over GF(2) for CSS codes — reliable, scalable
-      <code>minpoly</code> for the symplectic matrices arising in quantum error correction,
-      built on Oscar.jl.</p>
+      <p>Tools for structural measurement schedules, local detector discovery, and homology
+      checks for supported Clifford circuits. Emits structural
+      <a href="https://github.com/quantumlib/Stim">Stim</a> measurement circuits for supported
+      CSS codes; full fault-tolerant gadget verification remains separate.</p>
     </li>
     <li>
       <h3><a href="https://github.com/jerrylvx/gate2code-public">gate2code</a> <span class="lang">Python</span></h3>
@@ -137,14 +128,80 @@
       physical sign patterns, and verification programs for the paper's constructions.</p>
     </li>
   </ul>
+  <p class="research-tools">
+    I use LLM coding agents, including Claude Code and Codex, for research software,
+    simulations, literature work, and manuscript revision.
+  </p>
+</section>
+
+<section id="talks">
+  <h2>Presentations</h2>
+  <ul class="talk-list">
+    <li>
+      <span class="pub-title">Building codes with transversal CCZ using projective geometry and SAT solvers</span><br>
+      <span class="venue">Talk, <a href="https://seminar.math.vt.edu/applied_algebra/index.html">Applied Algebra Seminar</a>,
+      Virginia Tech (online), <time datetime="2026-10-22">Oct 22, 2026</time> (upcoming)</span>
+    </li>
+    <li>
+      <span class="pub-title">Boolean functions: applications in quantum error correction and beyond</span><br>
+      <span class="venue">Talk, <a href="https://sites.duke.edu/dqctheory/">Duke Quantum Center Theory Seminar</a>,
+      <time datetime="2026-09-16">Sep 16, 2026</time></span>
+    </li>
+    <li>
+      <span class="pub-title">Discovery and classification of small CSS codes supporting quasi-transversal CCZ logical gate</span><br>
+      <span class="venue">Poster, <a href="https://qec-conference.org/2026/schedule/">QEC 2026</a>, Jun 2026</span>
+    </li>
+    <li id="dynamical-code-poster">
+      <span class="pub-title">A dynamical error-correcting code from a minimally non-local hypergraph product code</span><br>
+      <span class="authors">with Kenneth R. Brown</span><br>
+      <span class="venue">Posters, QIP 2025 and QEC 2025</span>
+    </li>
+    <li id="neural-bp-poster">
+      <span class="pub-title">Improved decoding of quantum LDPC codes using neural-network enhanced belief propagation</span><br>
+      <span class="authors">with Arthur Pesah, Joschka Roffe, and Nithin Raveendran</span><br>
+      <span class="venue">Posters, QIP 2023, QEC 2023 (Sydney), and WE-Heraeus Seminar (Bad Honnef, 2023)</span>
+    </li>
+    <li>
+      <span class="pub-title">Entanglement dynamics in a many-body localized system</span><br>
+      <span class="authors">with Christian Bertoni, Steven Thomson, and Jens Eisert</span><br>
+      <span class="venue">Poster, CRC 183 Summer School 2022</span>
+    </li>
+    <li>
+      <span class="pub-title">Reduced density operators of finite-sized Heisenberg XXZ chains</span><br>
+      <span class="authors">with Alexander Seidel</span><br>
+      <span class="venue">Talk, APS March Meeting 2019</span>
+    </li>
+  </ul>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <ul class="dated-list">
+    <li>
+      <span class="when">Aug 2026–Present<br>Nov 2025–Apr 2026</span>
+      <div><strong>Consulting contractor</strong>, Xanadu Quantum Technologies.
+      Research on fault-tolerant quantum computing architecture.</div>
+    </li>
+    <li>
+      <span class="when">May 2026–Aug 2026</span>
+      <div><strong>Architecture intern</strong>, Xanadu Quantum Technologies.
+      Researched decoding for quantum LDPC codes.</div>
+    </li>
+  </ul>
 </section>
 
 <section id="teaching">
   <h2>Teaching</h2>
-  <ul class="teaching-list">
-    <li><span class="when">Fall 2024</span> TA, ECE 520 Quantum Engineering, Duke University</li>
-    <li><span class="when">Winter 2020</span> TA, tensor-network seminar, Freie Universität Berlin</li>
-    <li><span class="when">2016–2018</span> TA, grader, and physics help-desk mentor, Washington University in St.&nbsp;Louis</li>
+  <ul class="dated-list">
+    <li>
+      <span class="when">Spring 2026</span>
+      <div>Teaching assistant, <a href="https://bassconnections.duke.edu/project/liberata-open-source-academic-publishing-incentive-structures-peer-review-and-replications/">Liberata</a>,
+      Duke Bass Connections, Duke University. Mentored student research projects and
+      contributed to research and development on the algorithms team.</div>
+    </li>
+    <li><span class="when">Fall 2024</span><div>Teaching assistant, ECE 520 Quantum Engineering, Duke University</div></li>
+    <li><span class="when">Winter 2020</span><div>Teaching assistant, tensor-network seminar, Freie Universität Berlin</div></li>
+    <li><span class="when">2016–2018</span><div>Teaching assistant, grader, and physics help-desk mentor, Washington University in St.&nbsp;Louis</div></li>
   </ul>
 </section>
 

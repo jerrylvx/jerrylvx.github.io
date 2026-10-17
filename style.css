@@ -47,6 +47,11 @@ a:focus {
   text-decoration: underline;
 }
 
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.9em;
@@ -56,6 +61,27 @@ code {
 }
 
 /* Header */
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.profile-photo {
+  display: block;
+  flex: 0 0 auto;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 25% 65%;
+}
+
+.profile-info {
+  min-width: 0;
+}
 
 header h1 {
   margin: 0 0 0.25rem;
@@ -94,6 +120,24 @@ h2 {
   margin: 0 0 1rem;
   font-size: 1.3rem;
   letter-spacing: -0.01em;
+}
+
+h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+}
+
+#research article + article {
+  margin-top: 1.5rem;
+}
+
+#research p {
+  margin: 0;
+}
+
+.research-tools {
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .education {
@@ -168,19 +212,20 @@ h2 {
 
 /* Teaching */
 
-.teaching-list {
+.dated-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.teaching-list li {
-  margin-bottom: 0.5rem;
+.dated-list li {
+  display: grid;
+  grid-template-columns: 10.75rem minmax(0, 1fr);
+  gap: 0.25rem 1rem;
+  margin-bottom: 1rem;
 }
 
 .when {
-  display: inline-block;
-  min-width: 6.5rem;
   color: var(--muted);
   font-size: 0.95rem;
 }
@@ -196,13 +241,28 @@ footer {
 }
 
 @media (max-width: 480px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .profile-photo {
+    width: 128px;
+    height: 128px;
+  }
+
   body {
     font-size: 1rem;
     padding-top: 1.75rem;
   }
 
+  .dated-list li {
+    display: block;
+  }
+
   .when {
     display: block;
-    min-width: 0;
+    margin-bottom: 0.25rem;
   }
 }

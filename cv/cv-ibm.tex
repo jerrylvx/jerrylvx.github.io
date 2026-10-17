@@ -1,7 +1,7 @@
 \documentclass[11pt,letterpaper,sans]{moderncv}
 
 \moderncvstyle{classic}
-\moderncvcolor{purple}
+\moderncvcolor{black}
 \moderncvicons{marvosym}
 % Keep the name uniformly black across moderncv versions, including Overleaf.
 \colorlet{namecolor}{black}
@@ -38,39 +38,30 @@
 \renewcommand*{\namefont}{\fontsize{24}{26}\mdseries\upshape}
 
 \makecvtitle
-\vspace{-3em}
+\vspace{-3.25em}
 
 \section{Research Interests}
-\cvitem{}{Fault-tolerant quantum computing, especially transversal non-Clifford gates, quantum LDPC and Floquet codes, and decoding. Recent work uses projective geometry and SAT to construct codes implementing logical CCZ through transversal physical $T/T^\dagger$ gates.}
+\cvitem{}{Fault-tolerant quantum computing, especially transversal non-Clifford gates, quantum LDPC and Floquet codes, and decoding.}
 
 \section{Education}
 \cventry{2023--present}{PhD in Electrical and Computer Engineering}{Duke University}{Durham, NC}{expected 2027--2028}{\normalsize Advisor: Kenneth R. Brown}
-\cventry{2019--2022}{MSc in Physics}{Freie Universität Berlin}{Berlin, Germany}{}{\normalsize Thesis: \emph{Entanglement dynamics of a many-body localized system}. Advisor: Jens Eisert}
-\cventry{2015--2019}{BA in Mathematics and Physics}{Washington University in St.\ Louis}{St.\ Louis, MO}{}{\normalsize Cum Laude, Distinction in Mathematics, High Distinction in Physics}
+\cventry{2019--2022}{MSc in Physics}{Freie Universität Berlin}{Berlin, Germany}{}{\normalsize Advisor: Jens Eisert. Co-developed an entanglement-based method to extract spatial properties of quasi-local integrals of motion and contributed simulation code.}
+\cventry{2015--2019}{BA in Mathematics and Physics}{Washington University in St.\ Louis}{St.\ Louis, MO}{}{}
 
 \section{Research Experience}
 \cventry{2023--present}{Doctoral Research, Brown Group}{Duke University}{Durham, NC}{}{\normalsize
 \begin{itemize}
-\item Constructed CSS codes implementing logical CCZ via physical transversal $T/T^\dagger$ using projective geometry and SAT, and proved $n\geq 39$ for CSS codes with 3 logical qubits, $d_Z\geq 3$, and quasi-transversal CCZ
+\item Constructed CSS codes implementing logical CCZ via physical transversal $T/T^\dagger$ gates using projective geometry and SAT, and proved $n\geq 39$ for CSS codes with 3 logical qubits, $d_Z\geq 3$, and quasi-transversal CCZ
 \item Designed a dynamical code from a minimally non-local hypergraph product code
 \item Developed stim-floquet (\href{https://github.com/jerrylvx/stim-floquet}{github.com/jerrylvx/stim-floquet}), an open-source Python package for Floquet schedules, GF(2) homology checks, local detector discovery, and Stim circuit output
 \end{itemize}}
-\cventry{\parbox[t]{\hintscolumnwidth}{\raggedleft Oct 2025--May 2026\\Aug 2026--present}}{Consulting Contractor}{Xanadu Quantum Technologies}{Remote}{}{\normalsize
+\cventry{\parbox[t]{\hintscolumnwidth}{\raggedleft Aug 2026--present\\Oct 2025--May 2026}}{Consulting Contractor}{Xanadu Quantum Technologies}{Remote}{}{\normalsize
 \begin{itemize}
 \item Research fault-tolerant quantum architecture (supervisor: Eric Sabo)
 \end{itemize}}
 \cventry{May--Aug 2026}{Architecture Intern}{Xanadu Quantum Technologies}{Remote}{}{\normalsize
 \begin{itemize}
 \item Researched decoding for quantum LDPC codes (supervisor: Eric Sabo)
-\end{itemize}}
-\cventry{Jul--Oct 2022}{Research Intern}{HQS Quantum Simulations GmbH}{Karlsruhe, Germany}{}{\normalsize
-\begin{itemize}
-\item Developed and benchmarked a Hermite-polynomial spectral method for resonant-level models and wrote an internal report (supervisor: Peter Schmitteckert)
-\end{itemize}}
-\cventry{2021--2022}{Master's Thesis Research}{Freie Universität Berlin}{Berlin, Germany}{}{\normalsize
-\begin{itemize}
-\item Co-developed an entanglement-based method to extract spatial properties of quasi-local integrals of motion, published in Communications Physics
-\item Co-wrote simulation code and ran tensor-network simulations on clusters
 \end{itemize}}
 
 \section{Publications}
@@ -81,31 +72,15 @@
 \cvitem{AI skills}{Agentic orchestration, engineering, and harness building}
 \cvitem{Computing}{Python, C++, HPC clusters}
 
-\clearpage
-\section{Talks}
-\cvitem{Oct 2026}{\emph{Building codes with transversal CCZ using projective geometry and SAT solvers.} \href{https://seminar.math.vt.edu/applied_algebra/index.html}{Applied Algebra Seminar}, Virginia Tech (online), Oct 22, 2026 (upcoming).}
-\cvitem{Sep 2026}{\emph{Boolean functions: applications in quantum error correction and beyond.} \href{https://sites.duke.edu/dqctheory/}{Duke Quantum Center Theory Seminar}, Sep 16, 2026.}
-\cvitem{2019}{\emph{Reduced density operators of finite-sized Heisenberg XXZ chains.} With A.~Seidel. APS March Meeting 2019.}
-
-\section{Posters}
-\cvitem{2026}{\emph{Discovery and classification of small CSS codes supporting a quasi-transversal CCZ logical gate.} QEC 2026.}
-\cvitem{2025}{\emph{A dynamical error-correcting code from a minimally non-local hypergraph product code.} With K.~Brown. QIP 2025 and QEC 2025.}
-\cvitem{2023}{\emph{Improved decoding of quantum LDPC codes using neural-network enhanced belief propagation.} With A.~Pesah, J.~Roffe, N.~Raveendran. QIP 2023, QEC 2023 (Sydney), and \emph{Coping with Errors in Scalable Quantum Computing Systems}, WE-Heraeus Seminar (Bad Honnef).}
-\cvitem{2022}{\emph{Entanglement dynamics in a many-body localized system.} With C.~Bertoni, S.~Thomson, J.~Eisert. CRC 183 Summer School 2022.}
+\section{Selected Presentations}
+\cvitem{Oct 2026}{\emph{Building codes with transversal CCZ using projective geometry and SAT solvers.} Talk, \href{https://seminar.math.vt.edu/applied_algebra/index.html}{Applied Algebra Seminar}, Virginia Tech (online), Oct 22 (upcoming).}
+\cvitem{Sep 2026}{\emph{Boolean functions: applications in quantum error correction and beyond.} Talk, \href{https://sites.duke.edu/dqctheory/}{Duke Quantum Center Theory Seminar}, Sep 16.}
+\cvitem{2026}{\emph{Discovery and classification of small CSS codes supporting a quasi-transversal CCZ logical gate.} Poster, QEC 2026.}
+\cvitem{2025}{\emph{A dynamical error-correcting code from a minimally non-local hypergraph product code.} Poster, QIP 2025 and QEC 2025.}
+\cvitem{2023}{\emph{Improved decoding of quantum LDPC codes using neural-network enhanced belief propagation.} Poster, QIP 2023, QEC 2023 (Sydney), and WE-Heraeus Seminar (Bad Honnef).}
 
 \section{Teaching}
-\cventry{Spring 2026}{Teaching Assistant, Liberata}{Duke Bass Connections}{Duke University}{}{\normalsize
-\begin{itemize}
-\item Mentored student research projects and contributed to research and development on the algorithms team
-\end{itemize}}
+\cvitem{Spring 2026}{Teaching Assistant, Liberata, Duke Bass Connections, Duke University. Mentored student research projects and contributed to research and development on the algorithms team}
 \cvitem{Fall 2024}{Teaching Assistant, ECE 520 Quantum Engineering, Duke University}
-\cvitem{Winter 2020}{Teaching Assistant, tensor-network seminar, Freie Universität Berlin}
-
-\section{Awards and Certificates}
-\cvitem{2026}{Duke Graduate School Conference Travel Award}
-\cvitem{2025}{NVIDIA Academy certificate, AI Infrastructure and Operations Fundamentals}
-\cvitem{2017--2018}{Greg Delos Fellowship, Physics Department, Washington University in St.\ Louis}
-\cvitem{2016}{Undergraduate Research Fellowship, Physics Department, Washington University in St.\ Louis}
-\cvitem{2015--2019}{Dean's List, Washington University in St.\ Louis (Fall 2015 to Fall 2016, Spring 2019)}
 
 \end{document}

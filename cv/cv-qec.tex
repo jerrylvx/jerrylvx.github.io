@@ -1,0 +1,100 @@
+\documentclass[10pt,letterpaper,sans]{moderncv}
+
+\moderncvstyle{classic}
+\moderncvcolor{black}
+\moderncvicons{marvosym}
+% Keep the name uniformly black across moderncv versions, including Overleaf.
+\colorlet{namecolor}{black}
+\colorlet{firstnamecolor}{black}
+\colorlet{lastnamecolor}{black}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.5in]{geometry}
+\setlength{\hintscolumnwidth}{3.1cm}
+\urlstyle{same}
+\nopagenumbers{}
+% Keep terms and DOIs intact for applicant-tracking text extraction
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\tolerance=2000
+\emergencystretch=3em
+
+\name{Bohan}{Lu}
+\title{PhD Candidate, Quantum Error Correction}
+\email{bohan.lu@duke.edu}
+\homepage{jerrylvx.github.io}
+\extrainfo{\httpslink{github.com/jerrylvx}}
+
+\begin{document}
+
+% Plain-text contact line and bullets (icon glyphs extract as stray letters)
+\renewcommand*{\emailsymbol}{}
+\renewcommand*{\homepagesymbol}{}
+\renewcommand*{\listitemsymbol}{\textbullet~}
+\renewcommand{\labelitemi}{\textcolor{color1}{\textbullet}}
+% Compact the section hierarchy while keeping each heading clearly distinct.
+\renewcommand*{\sectionfont}{\large\mdseries\upshape}
+\renewcommand*{\hintfont}{\normalsize\mdseries\upshape}
+\settoheight{\baseletterheight}{\sectionstyle{o}}
+\makeatletter
+\RenewDocumentCommand{\section}{sm}{%
+  \par\addvspace{1ex}%
+  \phantomsection{}%
+  \addcontentsline{toc}{section}{#2}%
+  \cvitem[0ex]{\strut\raggedleft\raisebox{\baseletterheight}{\color{color1}\rule{\hintscolumnwidth}{0.8ex}}}{\strut\sectionstyle{#2}}%
+  \par\nobreak\addvspace{0.25ex}\@afterheading}
+\makeatother
+% Name at 24 pt (Duke guide: 16 pt or larger)
+\renewcommand*{\namefont}{\fontsize{24}{26}\mdseries\upshape}
+\renewcommand*{\addressfont}{\normalsize\mdseries\slshape}
+
+\makecvtitle
+% Leave clear space below the title and the complete contact block.
+\vspace{-2.2em}
+
+\section{Research Interests}
+\cvitem{}{Fault-tolerant quantum computing: low-overhead logical gates including transversal non-Clifford gates, quantum LDPC and Floquet codes, decoding methods, and circuit-level simulation with Stim.}
+
+\section{Education}
+\cventry{2023--Present}{PhD in Electrical and Computer Engineering}{Duke University}{Durham, NC}{expected 2027--2028}{\normalsize Advisor: Kenneth R. Brown}
+\cventry{2019--2022}{MSc in Physics}{Freie Universität Berlin}{Berlin, Germany}{}{\normalsize Advisor: Jens Eisert. Co-developed an entanglement-based method to extract spatial properties of quasi-local integrals of motion and contributed simulation code.}
+\cventry{2015--2019}{BA in Mathematics and Physics}{Washington University in St.\ Louis}{St.\ Louis, MO}{}{}
+
+\section{Research Experience}
+\cventry{2023--Present}{Doctoral Research, Brown Lab}{Duke University}{Durham, NC}{}{\normalsize
+\begin{itemize}
+\item Constructed CSS codes implementing logical CCZ via physical transversal $T/T^\dagger$ gates using projective geometry and SAT solvers
+\item Designed a dynamical code from a minimally non-local hypergraph product code
+\item Developed stim-floquet (\href{https://github.com/jerrylvx/stim-floquet}{github.com/jerrylvx/stim-floquet}), an open-source Python package for Floquet schedules, local detector discovery, and Stim circuit output
+\end{itemize}}
+\cventry{\parbox[t]{\hintscolumnwidth}{\raggedleft Aug 2026--Present\\Nov 2025--Apr 2026}}{Consulting Contractor}{Xanadu Quantum Technologies}{Remote}{}{\normalsize
+\begin{itemize}
+\item Research fault-tolerant quantum architecture (supervisor: Eric Sabo)
+\end{itemize}}
+\cventry{May 2026--Aug 2026}{Architecture Intern}{Xanadu Quantum Technologies}{Remote}{}{\normalsize
+\begin{itemize}
+\item Researched decoding for quantum LDPC codes (supervisor: Eric Sabo)
+\end{itemize}}
+
+\section{Publications}
+\cvitem{2026}{\begin{minipage}[t]{\linewidth}\raggedright\textbf{Building codes with transversal CCZ using projective geometry and SAT solvers.} \textbf{B.~Lu}, K.~R.~Brown. Preprint, \href{https://arxiv.org/abs/2610.09341}{arXiv:2610.09341}. Code and data: \href{https://github.com/jerrylvx/gate2code-public}{github.com/jerrylvx/gate2code-public}\end{minipage}}
+\cvitem{2024}{\begin{minipage}[t]{\linewidth}\raggedright\textbf{Measuring out quasi-local integrals of motion from entanglement.} \textbf{B.~Lu}, C.~Bertoni, S.~J.~Thomson, J.~Eisert. \emph{Communications Physics} \textbf{7}, 17 (2024). \href{https://doi.org/10.1038/s42005-023-01478-5}{doi:10.1038/s42005-023-01478-5}, \href{https://arxiv.org/abs/2301.01787}{arXiv:2301.01787}\end{minipage}}
+
+\section{Skills}
+\cvitem{AI skills}{Agentic orchestration, engineering, and harness building}
+\cvitem{Computing}{Python (NumPy, SciPy), C++, Stim, Git and GitHub, HPC clusters}
+
+\section{Presentations}
+\cvitem{Oct 2026}{\emph{Building codes with transversal CCZ using projective geometry and SAT solvers.} Talk, \href{https://seminar.math.vt.edu/applied_algebra/index.html}{Applied Algebra Seminar}, Virginia Tech (online), Oct 22.}
+\cvitem{Sep 2026}{\emph{Boolean functions: applications in quantum error correction and beyond.} Talk, \href{https://sites.duke.edu/dqctheory/}{Duke Quantum Center Theory Seminar}, Sep 16.}
+\cvitem{Jun 2026}{\emph{Discovery and classification of small CSS codes supporting quasi-transversal CCZ logical gate.} Poster, QEC 2026.}
+\cvitem{2025}{\emph{A dynamical error-correcting code from a minimally non-local hypergraph product code.} Poster, QIP 2025 and QEC 2025.}
+\cvitem{2023}{\emph{Improved decoding of quantum LDPC codes using neural-network enhanced belief propagation.} Poster, QIP 2023, QEC 2023 (Sydney), and WE-Heraeus Seminar (Bad Honnef).}
+
+\section{Teaching}
+\cvitem{Spring 2026}{Teaching Assistant, Liberata, Duke Bass Connections, Duke University. Mentored student research projects and contributed to research and development on the algorithms team.}
+\cvitem{Fall 2024}{Teaching Assistant, ECE 520 Quantum Engineering, Duke University}
+
+\end{document}
